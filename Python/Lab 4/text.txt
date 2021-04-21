@@ -1,0 +1,4 @@
+The average opening price is 168.70614066228066
+The average closing price is 168.7778510877193
+The maximun opening price is 230.779999
+The minimum opening price is 115.919998

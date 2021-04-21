@@ -1,0 +1,68 @@
+class Car ():
+    def __init__(self, center, wheel_radius, car_height, car_width):
+        self.wheel_circle = Circle(center, wheel_radius)
+        self.car_rectangle = Rectangle(Point(car_height, car_height), Point(car_width, car_width))
+        
+
+    def draw (self, win):
+        self.wheel_circle.draw(win)
+        self.car_rectangle.draw(win)
+
+    def move(self, dx, dy):
+        self.wheel_circle.move(dx, dy)
+        self.car_rectangle.move(dx, dy)
+
+    def set_color (self, wheel_color, car_color):
+        self.wheel_circle.setFill(wheel_color)
+        self.car_rectangle.setFill(car_color)
+
+
+
+    # create a window with width = 700 and height = 500
+    new_win = GraphWin('Car', 700, 500)
+    
+    wheel_center = Point(50, 50)
+    wheel_radius = 25
+    car_height =30
+    car_width =70
+
+    new_car = Car(wheel_center, 0.6*wheel_radius, car_heigth, car_width)
+
+    new_car.set_color ('black', 'yellow')
+
+    new_car.draw(new_win)
+
+
+
+
+
+
+    # add your code below this point
+    new_win.mainloop()
+
+
+
+
+
+
+
+
+
+    center = Point(100, 450)
+    circ1 = Circle(center, 30)
+    circ1.setFill('red')
+    circ1.draw(win)
+
+    center = Point(300, 450)
+    circ2 = Circle(center, 30)
+    circ2.setFill('red')
+    circ2.draw(win)
+
+    
+    rect = Rectangle(Point(50, 430), Point(350, 200))
+    rect.setFill('blue')
+    rect.draw(win)
+
+    circ1.move (0, 20)
+
+    
